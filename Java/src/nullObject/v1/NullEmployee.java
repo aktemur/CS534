@@ -8,6 +8,6 @@ public class NullEmployee implements IEmployee {
 
     @Override
     public void pay() {
-        // do nothing
+        // nothing
     }
 }

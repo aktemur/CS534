@@ -2,14 +2,11 @@ package nullObject.v0;
 
 public class Main {
     public static void main(String[] args) {
-        Employee e = Database.findEmployeddById(1234);
-        if (e != null && e.isTimeToPay()) {
-            e.pay();
-        }
-
-        e = Database.findEmployeddById(9999);
-        if (e != null && e.isTimeToPay()) {
-            e.pay();
+        for (int id = 1000; id < 1300; id++) {
+            Employee e = Database.findEmployeeById(id);
+            if (e != null && e.isTimeToPay()) {
+                e.pay();
+            }
         }
     }
 }
