@@ -1,3 +1,5 @@
+package strategy.v1;
+
 public class SimUDuck {
     public static void main(String[] args) {
         Duck mallard = new MallardDuck();
@@ -5,32 +7,32 @@ public class SimUDuck {
         Duck rubber = new RubberDuck();
         Duck decoy = new DecoyDuck();
 
-        mallard.performFly();
-        mallard.performQuack();
+        mallard.fly();
+        mallard.quack();
         System.out.println();
 
-        redHead.performFly();
-        redHead.performQuack();
+        redHead.fly();
+        redHead.quack();
         System.out.println();
 
-        rubber.performFly();
-        rubber.performQuack();
+        rubber.fly();
+        rubber.quack();
         System.out.println();
 
-        decoy.performFly();
-        decoy.performQuack();
+        decoy.fly();
+        decoy.quack();
         System.out.println();
 
         rubber.setFlyBehaviour(new FlyWithWings());
-        rubber.performFly();
+        rubber.fly();
         System.out.println();
 
         mallard.setQuackBehaviour(new Mute());
-        mallard.performQuack();
+        mallard.quack();
         System.out.println();
 
         rubber.setFlyBehaviour(new FlyWithRocket());
-        rubber.performFly();
+        rubber.fly();
         System.out.println();        
 
     }

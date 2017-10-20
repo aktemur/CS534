@@ -1,3 +1,5 @@
+package strategy.v1;
+
 public interface QuackBehaviour {
     public void quack();
 }

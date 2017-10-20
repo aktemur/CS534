@@ -1,3 +1,5 @@
+package strategy.v1;
+
 public abstract class Duck {
     FlyBehaviour flyBehaviour;
     QuackBehaviour quackBehaviour;
@@ -8,11 +10,11 @@ public abstract class Duck {
 
     public abstract void display();
 
-    public void performQuack() {
+    public void quack() {
         quackBehaviour.quack();
     }
 
-    public void performFly() {
+    public void fly() {
         flyBehaviour.fly();
     }
 
