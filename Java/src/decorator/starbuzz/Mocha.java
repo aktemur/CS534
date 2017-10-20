@@ -9,7 +9,7 @@ public class Mocha extends Condiment {
         return beverage.getDescription() + ", Mocha";
     }
  
-    public double cost() {
+    public double getCondimentCost() {
         return .20 + beverage.cost();
     }
 }
