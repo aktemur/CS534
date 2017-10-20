@@ -25,7 +25,7 @@ public:
 
 class Instructor : public Person {
 public:
-  int age;
+  int id;
   Dummy *dummy;
 
   Instructor() {
