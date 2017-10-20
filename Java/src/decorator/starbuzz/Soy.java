@@ -9,7 +9,7 @@ public class Soy extends Condiment {
         return beverage.getDescription() + ", Soy";
     }
 
-    public double cost() {
-        return .15 + beverage.cost();
+    protected double getCondimentCost() {
+        return .15;
     }
 }

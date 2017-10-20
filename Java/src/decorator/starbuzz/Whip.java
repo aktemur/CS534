@@ -9,7 +9,7 @@ public class Whip extends Condiment {
         return beverage.getDescription() + ", Whip";
     }
  
-    public double cost() {
-        return .10 + beverage.cost();
+    protected double getCondimentCost() {
+        return .10;
     }
 }

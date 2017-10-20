@@ -9,7 +9,7 @@ public class Milk extends Condiment {
         return beverage.getDescription() + ", Milk";
     }
 
-    public double cost() {
-        return .10 + beverage.cost();
+    protected double getCondimentCost() {
+        return .10;
     }
 }

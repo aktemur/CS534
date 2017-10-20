@@ -8,4 +8,10 @@ public abstract class Condiment extends Beverage {
     }
     
     public abstract String getDescription();
+
+    public double cost() {
+        return getCondimentCost() + beverage.cost();
+    }
+
+    protected abstract double getCondimentCost();
 }
