@@ -1,6 +1,6 @@
 package observer.weather;
 
-public class CurrentConditionsDisplay implements DisplayElement {
+public class CurrentConditionsDisplay {
     private float temperature;
     private float humidity;
 
@@ -8,7 +8,7 @@ public class CurrentConditionsDisplay implements DisplayElement {
 
     }
 	
-    public void update(float temperature, float humidity, float pressure) {
+    public void update(float temperature, float humidity) {
         this.temperature = temperature;
         this.humidity = humidity;
         display();

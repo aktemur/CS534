@@ -1,6 +1,6 @@
 package observer.weather;
 
-public class ForecastDisplay implements DisplayElement {
+public class ForecastDisplay {
     private float currentPressure = 29.92f;  
     private float lastPressure;
 
@@ -8,7 +8,7 @@ public class ForecastDisplay implements DisplayElement {
 
     }
     
-    public void update(float temp, float humidity, float pressure) {
+    public void update(float pressure) {
         lastPressure = currentPressure;
         currentPressure = pressure;
         

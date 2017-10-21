@@ -1,13 +1,13 @@
 package observer.weather;
 
-public class HeatIndexDisplay implements DisplayElement {
+public class HeatIndexDisplay {
     float heatIndex = 0.0f;
 
     public HeatIndexDisplay() {
 
     }
     
-    public void update(float t, float rh, float pressure) {
+    public void update(float t, float rh) {
         heatIndex = computeHeatIndex(t, rh);
         display();
     }

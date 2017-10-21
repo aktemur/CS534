@@ -1,7 +1,10 @@
 package observer.weather;
 
-import java.util.ArrayList;
-
+// This implementation is highly coupled with concrete display types.
+// Consider adding a second CurrentConditionsDisplay or a new HeatIndexDisplay
+// to this WeatherData. You will need to make lots of changes.
+// Also, if the displays' interfaces change, WeatherData class will be broken and
+// will need to be fixed.
 public class WeatherData {
     private float temperature;
     private float humidity;
@@ -28,9 +31,9 @@ public class WeatherData {
     }
 
     public void measurementsChanged() {
-        currentDisplay.update(temperature, humidity, pressure);
-        statisticsDisplay.update(temperature, humidity, pressure);
-        forecastDisplay.update(temperature, humidity, pressure);
+        currentDisplay.update(temperature, humidity);
+        statisticsDisplay.update(temperature);
+        forecastDisplay.update(pressure);
     }
     
     public void setMeasurements(float temperature, float humidity, float pressure) {
