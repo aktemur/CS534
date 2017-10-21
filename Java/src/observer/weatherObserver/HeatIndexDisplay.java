@@ -1,16 +1,14 @@
 package observer.weatherObserver;
 
-public class HeatIndexDisplay implements Observer, DisplayElement {
+public class HeatIndexDisplay implements Observer {
     float heatIndex = 0.0f;
-    private WeatherData weatherData;
-    
-    public HeatIndexDisplay(WeatherData weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+
+    public HeatIndexDisplay() {
+
     }
     
-    public void update(float t, float rh, float pressure) {
-        heatIndex = computeHeatIndex(t, rh);
+    public void update(WeatherData data) {
+        heatIndex = computeHeatIndex(data.getTemperature(), data.getHumidity());
         display();
     }
     

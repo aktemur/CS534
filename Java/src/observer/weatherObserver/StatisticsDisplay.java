@@ -1,18 +1,17 @@
 package observer.weatherObserver;
 
-public class StatisticsDisplay implements Observer, DisplayElement {
+public class StatisticsDisplay implements Observer {
     private float maxTemp = 0.0f;
     private float minTemp = 200;
     private float tempSum= 0.0f;
     private int numReadings;
-    private WeatherData weatherData;
-    
-    public StatisticsDisplay(WeatherData weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+
+    public StatisticsDisplay() {
+
     }
     
-    public void update(float temp, float humidity, float pressure) {
+    public void update(WeatherData data) {
+        float temp = data.getTemperature();
         tempSum += temp;
         numReadings++;
         

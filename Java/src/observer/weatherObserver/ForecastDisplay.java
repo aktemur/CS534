@@ -1,18 +1,16 @@
 package observer.weatherObserver;
 
-public class ForecastDisplay implements Observer, DisplayElement {
+public class ForecastDisplay implements Observer {
     private float currentPressure = 29.92f;  
     private float lastPressure;
-    private WeatherData weatherData;
-    
-    public ForecastDisplay(WeatherData weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+
+    public ForecastDisplay() {
+
     }
     
-    public void update(float temp, float humidity, float pressure) {
+    public void update(WeatherData data) {
         lastPressure = currentPressure;
-        currentPressure = pressure;
+        currentPressure = data.getPressure();
         
         display();
     }
