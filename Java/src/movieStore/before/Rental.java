@@ -1,19 +1,19 @@
 package movieStore.before;
 
 class Rental {
-   private Movie _movie;
-   private int _numDaysRented;
+   private Movie movie;
+   private int numDaysRented;
 
    public Rental(Movie movie, int numDaysRented) {
-      _movie = movie;
-      _numDaysRented = numDaysRented;
+      this.movie = movie;
+      this.numDaysRented = numDaysRented;
    }
 
    public int getNumDaysRented() {
-      return _numDaysRented;
+      return numDaysRented;
    }
 
    public Movie getMovie() {
-      return _movie;
+      return movie;
    }
 }

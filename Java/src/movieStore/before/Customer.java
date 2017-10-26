@@ -1,28 +1,30 @@
 package movieStore.before;
 
-import java.util.Vector;
+import java.util.LinkedList;
+import java.util.List;
 
 class Customer {
-   private String _name;
-   private Vector<Rental> _rentals = new Vector<Rental>();
+   private String name;
+   private List<Rental> rentals;
 
    public Customer(String name) {
-      _name = name;
+      this.name = name;
+      this.rentals = new LinkedList<Rental>();
    }
 
    public void addRental(Rental arg) {
-      _rentals.addElement(arg);
+      rentals.add(arg);
    }
 
    public String getName() {
-      return _name;
+      return name;
    }
 
    public String statement() {
       double totalAmount = 0;
       int frequentRenterPoints = 0;
       String result = "Rental Record for " + getName() + "\n";
-      for (Rental rental : _rentals) {
+      for (Rental rental : rentals) {
          double amount = 0;
          // determine amounts for each line
          switch (rental.getMovie().getPriceCode()) {
