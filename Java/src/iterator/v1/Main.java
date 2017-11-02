@@ -12,6 +12,17 @@ public class Main {
 		
 		processItems(myintegers.iterator());
 		processItems(myintegers.reverseIterator());
+
+		// Simultaneous iteration is OK
+		MyIterator<Integer> outer = myintegers.iterator();
+		while(outer.hasNext()) {
+			System.out.print(outer.next() + ": ");
+			MyIterator<Integer> inner = myintegers.iterator();
+			while(inner.hasNext()) {
+				System.out.print(inner.next() + ", ");
+			}
+			System.out.println();
+		}
 	}
 
 	// We do not need to duplicate code as processItemsForward and processItemsBackward.

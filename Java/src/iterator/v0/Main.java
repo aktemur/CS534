@@ -12,6 +12,8 @@ public class Main {
 
 		processItemsForward(myintegers);
         processItemsBackward(myintegers);
+
+        // THINK: Can you iterate the list in a nested loop?
 	}
 
 	private static void processItemsForward(MyList<Integer> numbers) {
