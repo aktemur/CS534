@@ -1,4 +1,4 @@
-package visitor.v1;
+package visitor.node.v1;
 
 public class VisitorExperiment {
     public static void main(String[] args) {

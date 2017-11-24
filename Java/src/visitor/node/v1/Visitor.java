@@ -1,4 +1,4 @@
-package visitor.v1;
+package visitor.node.v1;
 
 public abstract class Visitor {
     void visit(Node n) {

@@ -1,8 +1,7 @@
-package visitor.v0;
+package visitor.node.v1;
 
 public abstract class Node {
-    abstract int sum();
-    abstract int max();
+    abstract void accept(Visitor v);
 }
 
 class Leaf extends Node {
@@ -12,12 +11,8 @@ class Leaf extends Node {
         this.value = value;
     }
 
-    int sum() {
-        return value;
-    }
-
-    int max() {
-        return value;
+    void accept(Visitor v) {
+        v.visitLeaf(this);
     }
 }
 
@@ -32,14 +27,9 @@ class Binary extends Node {
         this.right = right;
     }
 
-    int sum() {
-        return value + left.sum() + right.sum();
+    void accept(Visitor v) {
+        v.visitBinary(this);
     }
-
-    int max() {
-        return Math.max(Math.max(left.max(), right.max()), value);
-    }
-
 }
 
 class Ternary extends Node {
@@ -53,11 +43,7 @@ class Ternary extends Node {
         this.right = right;
     }
 
-    int sum() {
-        return left.sum() + middle.sum() + right.sum();
-    }
-
-    int max() {
-        return Math.max(Math.max(left.max(), middle.max()), right.max());
+    void accept(Visitor v){
+        v.visitTernary(this);
     }
 }
