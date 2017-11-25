@@ -1,15 +1,15 @@
 package snakesAndLadders.model;
 
 public class Player {
-    private String name;
     private Cell cell;
+    private int index;
 
-    public Player(String name) {
-        this.name = name;
+    public Player(int index) {
+        this.index = index;
     }
 
-    public String getName() {
-        return name;
+    public int getIndex() {
+        return index;
     }
 
     public Cell getCell() {
@@ -29,6 +29,6 @@ public class Player {
 
     @Override
     public String toString() {
-        return name + " @ " + cell;
+        return "Player " + index + " @ " + cell;
     }
 }

@@ -14,7 +14,7 @@ public class Game {
         this.board = board;
         this.players = new ArrayList<Player>(numPlayers);
         for (int i = 0; i < numPlayers; i++) {
-            Player player = new Player("Player " + (i + 1));
+            Player player = new Player(i);
             players.add(player);
             player.setCell(board.getFirstCell());
         }
@@ -55,6 +55,10 @@ public class Game {
 
     public List<Player> getPlayers() {
         return players;
+    }
+
+    public int dieValue() {
+        return die.getFace();
     }
 
     @Override
