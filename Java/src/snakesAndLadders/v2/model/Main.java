@@ -4,8 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Board board = BoardBuilder.get6x6Board();
         IGame game = new Game(board, 2);
-        game = new RelaxedLandingRule(game);
-        //game = new ExactLandingRule(game);
+        game = new ExactLandingRule(game);
         game = new Lucky6Rule(game);
         game = new ByeByeRule(game);
 

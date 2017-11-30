@@ -17,6 +17,9 @@ public class Board {
             lastCell.setNext(cell);
             lastCell = cell;
         }
+        // Last cell points to itself to prevent going "out of bounds"
+        // This gives us the "RelaxedLandingRule" for free.
+        lastCell.setNext(lastCell);
     }
 
     public void setTransporter(int fromIndex, int toIndex) {

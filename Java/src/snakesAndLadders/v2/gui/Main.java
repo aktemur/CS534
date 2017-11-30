@@ -7,8 +7,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         IGame game = new Game(BoardBuilder.get6x6Board(), 2);
-        game = new RelaxedLandingRule(game);
-        //game = new ExactLandingRule(game);
+        game = new ExactLandingRule(game);
         game = new Lucky6Rule(game);
         game = new ByeByeRule(game);
 
