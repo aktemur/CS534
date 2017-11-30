@@ -1,6 +1,6 @@
-package snakesAndLadders.gui;
+package snakesAndLadders.v2.gui;
 
-import snakesAndLadders.model.Game;
+import snakesAndLadders.v2.model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,10 +8,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Controller implements ActionListener {
-    private Game game;
+    private IGame game;
     private GUI gui;
 
-    public Controller(Game game, GUI gui) {
+    public Controller(IGame game, GUI gui) {
         this.game = game;
         this.gui = gui;
         gui.addActionListener(this);
@@ -27,7 +27,9 @@ public class Controller implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        game.rollDie();
         game.move();
+        game.switchToNextPlayer();
         gui.repaint();
         if (game.isFinished()) {
             JOptionPane.showMessageDialog(null, "We have a winner!");

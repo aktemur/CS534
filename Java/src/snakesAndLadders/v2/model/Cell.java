@@ -1,4 +1,4 @@
-package snakesAndLadders.model;
+package snakesAndLadders.v2.model;
 
 public class Cell {
     private int index;

@@ -1,7 +1,7 @@
-package snakesAndLadders.gui;
+package snakesAndLadders.v1.gui;
 
-import snakesAndLadders.model.BoardBuilder;
-import snakesAndLadders.model.Game;
+import snakesAndLadders.v1.model.BoardBuilder;
+import snakesAndLadders.v1.model.Game;
 import java.io.IOException;
 
 public class Main {

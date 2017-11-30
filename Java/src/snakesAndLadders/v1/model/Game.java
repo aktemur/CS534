@@ -1,4 +1,4 @@
-package snakesAndLadders.model;
+package snakesAndLadders.v1.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class Game {
         int targetIndex = currentPlayer.getCell().getIndex() + numSteps;
         int lastIndex = board.getLastCell().getIndex();
         if (targetIndex <= lastIndex) {
-            currentPlayer.move(die.getFace());
+            currentPlayer.move(numSteps);
         }
         switchToNextPlayer();
     }

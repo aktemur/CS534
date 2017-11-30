@@ -1,4 +1,4 @@
-package snakesAndLadders.model;
+package snakesAndLadders.v1.model;
 
 public class Player {
     private Cell cell;

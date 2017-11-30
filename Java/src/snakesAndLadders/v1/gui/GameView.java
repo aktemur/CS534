@@ -1,6 +1,6 @@
-package snakesAndLadders.gui;
+package snakesAndLadders.v1.gui;
 
-import snakesAndLadders.model.*;
+import snakesAndLadders.v1.model.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

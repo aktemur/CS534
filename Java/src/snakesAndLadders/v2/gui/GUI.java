@@ -1,6 +1,6 @@
-package snakesAndLadders.gui;
+package snakesAndLadders.v2.gui;
 
-import snakesAndLadders.model.Game;
+import snakesAndLadders.v2.model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,12 +8,12 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 public class GUI extends JPanel {
-    private Game game;
+    private IGame game;
     private GameView gameView;
     private JButton moveButton;
     private JLabel dieValue;
 
-    public GUI(Game game, String boardImagePath, int numRows, int numCols) throws IOException {
+    public GUI(IGame game, String boardImagePath, int numRows, int numCols) throws IOException {
         this.game = game;
 
         setLayout(new BorderLayout());
